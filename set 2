@@ -1,0 +1,54 @@
+Set-2
+1.	Write a NumPy program to convert a list of numeric value into a one-dimensional NumPy array.
+import numpy as np
+l = [12.23, 13.32, 100, 36.32]
+print("Original List:",l)
+a = np.array(l)
+print("One-dimensional NumPy array: ",a)
+output:
+Original List: [12.23, 13.32, 100, 36.32]
+One-dimensional NumPy array:  [ 12.23  13.32 100.    36.32]
+
+2.	Write a NumPy program to copy data from a given array to another array. 
+import numpy as np
+x = np.array([24, 27, 30, 29, 18, 14])
+print("Original array:")
+print(x)
+y = np.empty_like(x)
+y[:] = x
+print("copied array:")
+print(y)
+
+output:
+Original array:
+[24 27 30 29 18 14]
+copied array:
+[24 27 30 29 18 14]
+3.	Write a NumPy program to get true division of the element-wise array inputs.
+import numpy as np
+x = np.arange(10)
+print("Original array:")
+print(x)
+print("array after divison of elements:")
+print(np.true_divide(x, 3))
+
+output:
+Original array:
+[0 1 2 3 4 5 6 7 8 9]
+array after divison of elements:
+[0.         0.33333333 0.66666667 1.         1.33333333 1.66666667
+ 2.         2.33333333 2.66666667 3.        ]
+4.	Write a NumPy program to replace "PHP" with "Python" in the element of a given array 
+import numpy as np
+x = np.array(['PHP Exercises, Practice, Solution'])
+print("Original Array:")
+print(x)
+r = np.char.replace(x, "PHP", "Python")
+print("New array:")
+print(r) 
+
+output:
+Original Array:
+['PHP Exercises, Practice, Solution']
+New array:
+['Python Exercises, Practice, Solution']  
