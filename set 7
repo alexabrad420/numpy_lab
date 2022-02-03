@@ -1,0 +1,83 @@
+Set-7
+1.	Write a NumPy program Element-wise addition of 2 numpy arrays. 
+import numpy as np
+arr1 = np.array([2,1,3,12,41,21,5])
+print("1st array:")
+print(arr1)
+arr2 = np.array([3,2,1,5,2,31,41])
+print("2nd array:")
+print(arr2)
+print("array after addition of array values:")
+print(np.add(arr1,arr2))
+
+output:
+1st array:
+[ 2  1  3 12 41 21  5]
+2nd array:
+[ 3  2  1  5  2 31 41]
+array after addition of array values:
+[ 5  3  4 17 43 52 46]
+
+2.	Write a NumPy program to add an extra column to a NumPy array. 
+import numpy as np
+x = np.array([[1,2,3], [5,6,7]])
+print("array-1:")
+print(x)
+y = np.array([[4], [8]])
+print("array-2:")
+print(y)
+print("modified array")
+print(np.append(x, y, axis=1))
+
+output:
+array-1:
+[[1 2 3]
+ [5 6 7]]
+array-2:
+[[4]
+ [8]]
+modified array
+[[1 2 3 4]
+ [5 6 7 8]]
+3.	Write a NumPy program to get the floor, ceiling and truncated values of the elements of a numpy array. ( example: [-1.6, -1.5, -0.3, 0.1, 1.4, 1.8, 2.0] ). 
+import numpy as np
+x = np.array([-1.6, -1.5, -0.3, 0.1, 1.4, 1.8, 2.0])
+print("Original array:")
+print(x)
+print("Floor values of the above array elements:")
+print(np.floor(x))
+print("Ceil values of the above array elements:")
+print(np.ceil(x))
+print("Truncated values of the above array elements:")
+print(np.trunc(x))
+
+
+output:
+Original array:
+[-1.6 -1.5 -0.3  0.1  1.4  1.8  2. ]
+Floor values of the above array elements:
+[-2. -2. -1.  0.  1.  1.  2.]
+Ceil values of the above array elements:
+[-1. -1. -0.  1.  2.  2.  2.]
+Truncated values of the above array elements:
+[-1. -1. -0.  0.  1.  1.  2.]
+4.	Write a NumPy program to make the length of each element 15 of a given array and the string centered / left-justified / right-justified with paddings of _.
+import numpy as np
+x = np.array(['welcome','to','numpy','lab'], dtype=np.str)
+print("Original Array:")
+print(x)
+centered = np.char.center(x, 15, '_')
+left = np.char.ljust(x, 15, '_')
+right = np.char.rjust(x, 15, '_')
+print("\nCentered =", centered)
+print("Left =", left)
+print("Right =", right)
+
+output:
+Original Array:
+['welcome' 'to' 'numpy' 'lab']
+
+Centered = ['____welcome____' '_______to______' '_____numpy_____' '______lab______']
+Left = ['welcome________' 'to_____________' 'numpy__________' 'lab____________']
+Right = ['________welcome' '_____________to' '__________numpy' '____________lab']
+ 
