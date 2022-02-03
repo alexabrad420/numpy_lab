@@ -1,0 +1,114 @@
+Set-1
+1.	Write a NumPy program to create an array of 10 zeros, 10 ones, 10 fives. 
+import numpy as np
+print("An array of 10 zeros:")
+print(np.zeros(10))
+print("An array of 10 ones:")
+print(np.ones(10))
+print("An array of 10 fives:")
+print(np.ones(10)*5)
+
+output
+An array of 10 zeros:
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+An array of 10 ones:
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+An array of 10 fives:
+[5. 5. 5. 5. 5. 5. 5. 5. 5. 5.]
+
+2.	Write a NumPy program to add two arrays A and B of sizes (3,3) and (3,3). 
+import numpy as np
+arr1 = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print("1st array :")
+print(arr1)
+arr2 = np.array([[9,8,7],[6,5,4],[3,2,1]])
+print("2nd array :")
+print(arr2)
+print("Sum of two arrays:")
+print(np.add(arr1,arr2))
+
+output:
+1st array :
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+2nd array :
+[[9 8 7]
+ [6 5 4]
+ [3 2 1]]
+Sum of two arrays:
+[[10 10 10]
+ [10 10 10]
+ [10 10 10]]
+
+3.	Write a NumPy program to add, subtract, multiply, divide arguments elementwise. (take 2X2 arrays). 
+import numpy as np
+arr1 = np.array([[1,2,3],[4,5,6]])
+arr2 = np.array([[9,8,7],[6,5,4]])
+print("original arrays:")
+print(arr1)
+print()
+print(arr2)
+print("Add:")
+print(np.add(arr1,arr2))
+print("Subtract:")
+print(np.subtract(arr1,arr2))
+print("Multiply:")
+print(np.multiply(arr1,arr2))
+print("Divide:")
+print(np.divide(arr1,arr2))
+
+output:
+original arrays:
+[[1 2 3]
+ [4 5 6]]
+
+[[9 8 7]
+ [6 5 4]]
+Add:
+[[10 10 10]
+ [10 10 10]]
+Subtract:
+[[-8 -6 -4]
+ [-2  0  2]]
+Multiply:
+[[ 9 16 21]
+ [24 25 24]]
+Divide:
+[[0.11111111 0.25       0.42857143]
+ [0.66666667 1.         1.5       ]]
+
+4.	Write a NumPy program to test equal, not equal, greater equal, greater and less test of all the elements of two given arrays.
+import numpy as np
+x1 = np.array(['Hello', 'PHP', 'JS', 'examples', 'html'])
+x2 = np.array(['Hello', 'php', 'Java', 'examples', 'html'])
+print("Array1:")
+print(x1)
+print("Array2:")
+print(x2)
+print("Equal test:")
+print(np.char.equal(x1, x2))
+print("Not equal test:")
+print(np.char.not_equal(x1, x2))
+print("Less equal test:")
+print(np.char.less_equal(x1, x2))
+print("Greater equal test:")
+print(np.char.greater_equal(x1, x2))
+print("Less test:")
+print(np.char.less(x1, x2))
+
+output:
+Array1:
+['Hello' 'PHP' 'JS' 'examples' 'html']
+Array2:
+['Hello' 'php' 'Java' 'examples' 'html']
+Equal test:
+[ True False False  True  True]
+Not equal test:
+[False  True  True False False]
+Less equal test:
+[ True  True  True  True  True]
+Greater equal test:
+[ True False False  True  True]
+Less test:
+[False  True  True False False]
