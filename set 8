@@ -1,0 +1,84 @@
+Set-8
+1.	Write a NumPy program to reverse an array of values ranging from 5 to 25. 
+import numpy as np
+arr = np.arange(5,26)
+print("the required array:")
+arr = arr[::-1]
+print(arr)
+
+output:
+  the required array:
+[25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10  9  8  7  6  5]
+2.	Write a NumPy program to split of an array of shape 4x4 it into two arrays along the second axis. 
+import numpy as np
+x = np.arange(16).reshape((4, 4))
+print("Original array:",x)
+print("After splitting horizontally:")
+print(np.hsplit(x, [2, 6]))
+
+output:
+Original array: [[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]
+ [12 13 14 15]]
+After splitting horizontally:
+[array([[ 0,  1],
+       [ 4,  5],
+       [ 8,  9],
+       [12, 13]]), array([[ 2,  3],
+       [ 6,  7],
+       [10, 11],
+       [14, 15]]), array([], shape=(4, 0), dtype=int64)]
+3.	Write a NumPy program to compute the trigonometric sine, cosine and tangent array of angles given in degrees. 
+import numpy as np
+arr = np.array((0., 30., 45., 60., 90.))
+print("original array:")
+print(arr)
+print("trignometric sine:")
+print(np.sin(arr))
+print("trignometric cosine:")
+print(np.cos(arr))
+print("trignometric tangent:")
+print(np.tan(arr))
+
+output:
+original array:
+[ 0. 30. 45. 60. 90.]
+trignometric sine:
+[ 0.         -0.98803162  0.85090352 -0.30481062  0.89399666]
+trignometric cosine:
+[ 1.          0.15425145  0.52532199 -0.95241298 -0.44807362]
+trignometric tangent:
+[ 0.         -6.4053312   1.61977519  0.32004039 -1.99520041]
+4.	Write a NumPy program to capitalize the first letter, lowercase, uppercase, swapcase, title-case of all the elements of a given array.
+import numpy as np
+x = np.array(['welcome','to','numpy','lab'])
+print("Original Array:")
+print(x)
+print("capitalized")
+print(np.char.capitalize(x))
+print("lowered:")
+print(np.char.lower(x))
+print("uppered:")
+print(np.char.upper(x))
+print("Swapcased:")
+print(np.char.swapcase(x))
+print("titlecased:")
+print(np.char.title(x))
+
+
+output:
+Original Array:
+['welcome' 'to' 'numpy' 'lab']
+capitalized
+['Welcome' 'To' 'Numpy' 'Lab']
+lowered:
+['welcome' 'to' 'numpy' 'lab']
+uppered:
+['WELCOME' 'TO' 'NUMPY' 'LAB']
+Swapcased:
+['WELCOME' 'TO' 'NUMPY' 'LAB']
+titlecased:
+['Welcome' 'To' 'Numpy' 'Lab']
+
+ 
