@@ -1,0 +1,67 @@
+Set-10
+1.	Write a NumPy program to Convert a binary numpy array (containing only 0s and 1s) to a boolean numpy array. 
+import numpy as np 
+arr = np.random.randint(2,size=(1,10))
+print("the binary array :")
+print(arr)
+arr = np.array(arr,dtype="bool")
+print("boolean form ")
+print(arr)
+output:
+the binary array :
+[[1 1 1 0 0 0 0 0 0 0]]
+boolean form 
+[[ True  True  True False False False False False False False]]
+2.	Write a NumPy program to create a new shape to an array without changing its data. ([1, 2, 3, 4, 5, 6]) change to 3X2 and 2X3.) 
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5, 6])
+arr = np.reshape(arr,(3,2))
+print("new array")
+print(arr)
+arr = np.reshape(arr,(2,3))
+print("new array")
+print(arr)
+output:
+new array
+[[1 2]
+ [3 4]
+ [5 6]]
+new array
+[[1 2 3]
+[4 5 6]]
+3.	Write a NumPy program to compute the mean, standard deviation of given array.
+import numpy as np
+arr = np.arange(8)
+print("given array:")
+print(arr)
+print("median")
+print(np.median(arr))
+print("standard devation")
+print(np.std(arr))
+
+output:
+given array:
+[0 1 2 3 4 5 6 7]
+median
+3.5
+standard devation
+2.29128784747792
+ 
+4.	Write a NumPy program to concatenate element-wise two arrays of string.
+import numpy as np
+arr1 = np.array(['welcome ','to '])
+arr2 = np.array(['numpy','lab'])
+print("Array1:")
+print(arr1)
+print("Array2:")
+print(arr2)
+arr = np.char.add(arr1,arr2)
+print("new array:")
+print(arr)
+output:
+Array1:
+['welcome ' 'to ']
+Array2:
+['numpy' 'lab']
+new array:
+['welcome numpy' 'to lab']
